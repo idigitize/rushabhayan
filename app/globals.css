@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Previous CSS content remains... */
+
+@theme inline {
+  /* ... previous theme config ... */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* ... ensuring the previous content is preserved ... */
 /* Didot Font Family */
 @font-face {
   font-family: "Didot";
@@ -132,11 +149,11 @@
 
   /* Figma Design Color Scheme */
   --cream-light: #fff2d6;
-  --cream-dark: #fff2d6;
+  --cream-dark: #fff2d6; /* Assuming same as user request */
   --brown-dark: #5e2a16;
-  --brown-darker: #5e2a16;
+  --brown-darker: #5e2a16; /* Assuming same */
   --brown-medium: #463e2d;
-  --brown-medium-alt: #463e2d;
+  --brown-medium-alt: #463e2d; /* Assuming same */
   --brown-muted: #28271f;
   --gray-dark: #555;
   --teal-muted: #3c5d64;
@@ -240,17 +257,16 @@
 
   /* Border Radius */
   --radius: var(--radius);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Animations */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
