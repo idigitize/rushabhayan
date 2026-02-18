@@ -22,7 +22,7 @@ const navigation = [
 const Navbar = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [activeSubmenu, setActiveSubmenu] = useState();
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
@@ -78,7 +78,7 @@ const Navbar = () => {
                 {item.megaMenu && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-7xl bg-cream-light border-t border-brown-dark/5 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
                     <div className="mx-auto max-w-7xl px-8 py-12 grid grid-cols-4 gap-2">
-                      {item.categories?.map((category, idx) => (
+                      {item?.categories?.map((category, idx) => (
                         <div key={idx}>
                           <h3 className="font-didot text-lg mb-4 text-brown-darker">
                             {category.name}
@@ -164,7 +164,7 @@ const Navbar = () => {
                 {/* Mobile Submenu */}
                 {item.megaMenu && activeSubmenu === item.name && (
                   <div className="mt-4 pl-4 space-y-4">
-                    {item.categories?.map((cat, idx) => (
+                    {item?.categories?.map((cat, idx) => (
                       <div key={idx}>
                         <h4 className="font-manrope font-semibold text-brown-medium mb-2">
                           {cat.name}
