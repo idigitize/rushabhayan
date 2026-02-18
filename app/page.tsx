@@ -16,7 +16,7 @@ export default function Home() {
     <div className="relative min-h-screen w-full max-w-screen">
       {/* Background - Removed "absolute", kept "fixed" */}
       <Image
-        src="/assets/images/background.jpg"
+        src="/assets/images/background.webp"
         alt="Background"
         width={1920}
         height={1080}
