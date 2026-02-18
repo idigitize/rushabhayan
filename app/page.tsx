@@ -6,6 +6,10 @@ import StampComponent from "./components/landing/StampComponent";
 import RollingBadge from "./components/landing/RollingBadge";
 import AboutSection from "./components/landing/AboutSection";
 import RecentlyPublished from "./components/landing/RecentlyPublished";
+import EventBanner from "./components/landing/EventBanner";
+import FaqSection from "./components/landing/FaqSection";
+import MemberCTA from "./components/landing/MemberCTA";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -41,6 +45,10 @@ export default function Home() {
       <StampComponent />
       <AboutSection />
       <RecentlyPublished />
+      <EventBanner />
+      <FaqSection />
+      <MemberCTA />
+      <Footer />
     </div>
   );
 }

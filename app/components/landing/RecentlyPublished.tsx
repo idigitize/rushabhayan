@@ -41,7 +41,7 @@ const publications = [
 
 const PublishedSection = () => {
   return (
-    <section className="bg-[#f3e5d0] flex flex-col p-8 z-20 md:p-16  font-manrope">
+    <section className="bg-[#f3e5d0] flex flex-col p-8 z-10 md:p-16  font-manrope">
       <div className="max-w-7xl mx-auto z-50">
         {/* Header with Phosphor Navigation Icons */}
         <div className="flex justify-between items-center mb-10   h-20 z-30">
