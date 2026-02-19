@@ -43,14 +43,12 @@ const PublishedSection = () => {
   return (
     <section className="bg-[#f3e5d0] flex flex-col p-8 z-10 md:p-16  font-manrope">
       <div className="max-w-7xl mx-auto z-50">
-        {/* Header with Phosphor Navigation Icons */}
         <div className="flex justify-between items-center mb-10   h-20 z-30">
           <h2 className="text-4xl  font-didot text-gray-800">
             Recently <span className="italic">Published</span>
           </h2>
           <div className="flex gap-2">
             <button className="p-2 hover:bg-black/5 rounded-full transition-colors">
-              {/* Using Phosphor Caret with custom weight */}
               <ArrowLeftIcon
                 size={32}
                 weight="light"
@@ -66,18 +64,15 @@ const PublishedSection = () => {
             </button>
           </div>
         </div>
-        {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {publications.map((item) => (
             <div key={item.id} className="group cursor-pointer">
-              {/* Image with hover effect */}
               <div className="relative mb-6 flex flex-col gap-2 overflow-hidden ">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-contain"
                 />
-                {/* Meta & Title */}
                 <div className="flex justify-between items-center z-30  px-4 ">
                   <span className=" text-gray-700  uppercase tracking-tighter">
                     {item.date}

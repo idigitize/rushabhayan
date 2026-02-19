@@ -17,7 +17,7 @@ const HeroSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "-15% top",
+          start: "0 top",
           end: "+=600%",
           scrub: 1,
           pin: true,
@@ -25,16 +25,13 @@ const HeroSection = () => {
         },
       });
 
-      // 1. Small Text Animation (Right to Left)
       tl.to(textRef.current, {
         x: "-20%",
-        duration: 3,
+        duration: 5,
         ease: "power1.inOut",
       });
 
-      // 2. Images: Full screen -> Small, Tilted & Staggered
       imagesRef.current.forEach((img: any, index: number) => {
-        // Generate a random tilt between -6 and 6 degrees
         const randomRotation = (Math.random() * 12 - 6).toFixed(2);
 
         tl.fromTo(
@@ -69,7 +66,7 @@ const HeroSection = () => {
       {/* Moving Text Layer */}
       <div
         ref={textRef}
-        className="absolute inset-0 flex items-center whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-full"
+        className="absolute inset-0 flex items-center whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-[60%]"
         style={{ fontFamily: 'Didot, "Didot LT STD", "Hoefler Text", serif' }}
       >
         A search for <span className=" italic">&nbsp;roots</span> A journey

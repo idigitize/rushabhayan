@@ -30,7 +30,6 @@ const Navbar = () => {
     <nav className="relative text-brown-dark w-full z-100 border-b border-brown-dark/10 bg-[url('/assets/images/background.webp')] bg-cover bg-center bg-no-repeat ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button
               type="button"
@@ -42,14 +41,12 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Logo */}
           <div className="flex-shrink-0 flex items-center justify-center md:justify-start">
             <Link href="/" className="font-didot text-3xl tracking-tight">
               RUSHABHAYAN
             </Link>
           </div>
 
-          {/* Desktop Navigation & Contact Us */}
           <div className="hidden md:flex flex-1 justify-end space-x-4 text-lg h-full items-center">
             {navigation.map((item) => (
               <div
@@ -73,8 +70,7 @@ const Navbar = () => {
                   {item.megaMenu && (
                     <CaretDown size={14} className="ml-1 mt-0.5" />
                   )}
-                </Link>{" "}
-                {/* Mega Menu / Dropdown */}
+                </Link>
                 {item.megaMenu && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-7xl bg-cream-light border-t border-brown-dark/5 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
                     <div className="mx-auto max-w-7xl px-8 py-12 grid grid-cols-4 gap-2">
@@ -98,7 +94,6 @@ const Navbar = () => {
                         </div>
                       ))}
 
-                      {/* Featured Section in Menu */}
                       <div className="col-span-1 relative h-64 bg-brown-muted/10 rounded-lg overflow-hidden flex items-end p-6">
                         <div className="relative z-10">
                           <p className="text-brown-dark font-didot text-xl mb-2">
@@ -118,7 +113,6 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* Contact Us Button */}
             <div className="hidden md:block pl-4">
               <Button variant="primary" size="md" className="text-lg">
                 CONTACT US
@@ -128,7 +122,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-20 z-40 bg-cream-light px-6 border-t border-brown-dark/10 overflow-y-auto">
           <div className="flex flex-col space-y-6 pt-6 pb-20">
@@ -161,7 +154,6 @@ const Navbar = () => {
                   )}
                 </div>
 
-                {/* Mobile Submenu */}
                 {item.megaMenu && activeSubmenu === item.name && (
                   <div className="mt-4 pl-4 space-y-4">
                     {item?.categories?.map((cat, idx) => (

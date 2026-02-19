@@ -6,7 +6,6 @@ const MemberCTA = () => {
   return (
     <section className="relative w-full py-20 px-4 md:px-8 ">
       <div className="max-w-7xl mx-auto w-full bg-[#463e2d] text-[#f3e5d0] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
-        {/* Left Content */}
         <div className="flex flex-col gap-2 z-10 text-center md:text-left">
           <span className="text-lg md:text-xl font-manrope tracking-wide">
             Join Us At Rushabhayan
@@ -16,7 +15,6 @@ const MemberCTA = () => {
           </h2>
         </div>
 
-        {/* Right CTA Button */}
         <div className="z-10">
           <div className="hidden md:block pl-4">
             <Button

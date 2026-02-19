@@ -38,7 +38,6 @@ const FaqSection = () => {
 
   return (
     <section className="relative w-full py-16 md:py-24 overflow-hidden">
-      {/* Background Texture Overlay - Optional if image is available, otherwise relying on color */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40 mix-blend-multiply"
         style={{
@@ -48,14 +47,12 @@ const FaqSection = () => {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
-        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-[#3e2723] font-didot">
             Frequently Asked <span className="italic">Questions</span>
           </h2>
         </div>
 
-        {/* Accordion */}
         <div className="flex flex-col border-t border-[#3e2723]/20">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;

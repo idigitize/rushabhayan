@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#1e1c16] relative z-30 text-[#eaddc5] py-16 px-6 md:px-16 font-manrope">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-24">
-        {/* Left Section: Brand & Socials */}
         <div className="flex flex-col gap-6 md:w-1/3">
           <div>
             <span className="text-sm tracking-wide text-[#a89f91] uppercase">
@@ -18,7 +17,6 @@ const Footer = () => {
             </h2>
           </div>
 
-          {/* Social Icons */}
           <div className="flex gap-4 mt-2">
             <Link
               href="#"
@@ -48,9 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section: Links */}
         <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:w-2/3 md:justify-end">
-          {/* Menu Column */}
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold tracking-wider text-[#a89f91] uppercase mb-2">
               Menu
@@ -107,7 +103,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Get Connected Column */}
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold tracking-wider text-[#a89f91] uppercase mb-2">
               Get Connected
