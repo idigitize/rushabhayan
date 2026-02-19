@@ -3,6 +3,7 @@ import "./globals.css";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
 import { Manrope } from "next/font/google";
+import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Rushabhayan - Premium Fashion",
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={"antialiased font-manrope " + manrope.className}>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
