@@ -31,7 +31,7 @@ const StampComponent = () => {
         stagger: 0.1,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 20%",
+          start: "top 10%",
           end: "+=150%",
           scrub: 1,
           pin: true,

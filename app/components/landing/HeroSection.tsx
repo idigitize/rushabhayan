@@ -10,7 +10,16 @@ const HeroSection = () => {
   const textRef = useRef(null);
   const imagesRef: any = useRef([]);
 
-  const images = Array(8).fill("/assets/images/1.png");
+  const images = [
+    "/assets/images/4.jpg",
+    "/assets/images/5.jpg",
+    "/assets/images/1.png",
+    "/assets/images/2.jpg",
+    "/assets/images/3.jpg",
+    "/assets/images/4.jpg",
+    "/assets/images/2.jpg",
+    "/assets/images/5.jpg",
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -66,11 +75,11 @@ const HeroSection = () => {
       {/* Moving Text Layer */}
       <div
         ref={textRef}
-        className="absolute inset-0 flex items-center whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-[60%]"
+        className="absolute inset-0 flex items-center  whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-[60%]"
         style={{ fontFamily: 'Didot, "Didot LT STD", "Hoefler Text", serif' }}
       >
-        A search for <span className=" italic">&nbsp;roots</span> A journey
-        home.
+        A search for <span className=" italic mb-4">&nbsp;roots.&nbsp;</span> A
+        journey home.
       </div>
 
       {/* Centered Image Frame */}

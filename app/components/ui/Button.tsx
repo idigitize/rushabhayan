@@ -16,11 +16,12 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "relative inline-flex items-center justify-center font-manrope font-semibold transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed group";
+    "relative cursor-pointer inline-flex items-center justify-center font-manrope font-semibold transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed group";
 
   const variants = {
     // Assuming you have these colors in tailwind.config.js or using arbitrary values
-    primary: "bg-[#5D2E17] text-[#FDF6E3] hover:bg-[#4A2512]",
+    primary:
+      "bg-[#5D2E17] text-[#FDF6E3] hover:bg-[#4A2512] hover:text-[#FDF6E3]",
     secondary: "bg-[#FDF6E3] text-[#5D2E17] hover:bg-white",
     outline:
       "border border-[#5D2E17] text-[#5D2E17] hover:bg-[#5D2E17] hover:text-[#FDF6E3]",
