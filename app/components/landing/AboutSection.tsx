@@ -21,25 +21,25 @@ const AboutSection = () => {
       title: "Knowledge & Discovery",
       image: "/assets/images/1.png",
       description:
-        "A gateway to curated research, publications, and intellectual resources that deepen understanding and preserve scholarly thought.",
+        "Rushabhayan presents curated research, publications, and primary sources rooted in India's intellectual traditions. It strengthens access to scholarship that deepens understanding and sustains civilisational continuity.",
     },
     {
       title: "Art & Expression",
       image: "/assets/images/4.jpg",
       description:
-        "Celebrating the rich tapestry of artistic traditions through contemporary lenses, fostering creativity and cultural continuity.",
+        "Through classical arts, visual storytelling, and interpretive works, Rushabhayan explores how knowledge traditions find expression beyond text.",
     },
     {
       title: "Exhibitions & Installations",
       image: "/assets/images/5.jpg",
       description:
-        "Immersive experiences that bring history and heritage to life, bridging the gap between past brilliance and future inspiration.",
+        "Rushabhayan curates manuscripts, archival materials, and heritage artefacts with scholarly context and precision. These installations position India's textual and material legacy within a contemporary framework of understanding.",
     },
     {
       title: "Research & Dialogue",
       image: "/assets/images/2.jpg",
       description:
-        "Building a vibrant community of scholars, practitioners, and enthusiasts through critical inquiry and collaborative storytelling.",
+        "Rushabhayan convenes scholars, institutions, and researchers for structured academic exchange. Panels, paper presentations, and moderated discussions advance rigorous, cross-disciplinary dialogue.",
     },
   ];
 
@@ -108,7 +108,7 @@ const AboutSection = () => {
               About <span className="italic">Us</span>
             </h4>
             <h2 className="text-3xl font-semibold md:text-5xl leading-tight">
-              How We Bring Changes Together
+              How Is It <span className="italic">Curated?</span>
             </h2>
           </div>
 

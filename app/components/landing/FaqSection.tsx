@@ -5,27 +5,33 @@ import { CaretDown, CaretUp } from "@phosphor-icons/react";
 const faqs = [
   {
     id: 1,
-    question: "How do I register for events like Rushabhayan 2026?",
+    question: "How do I register for Rushabhayan 3?",
     answer:
-      "You can register through the Event Registration page by filling out the required details and completing the registration process.",
+      "Click the Register button to complete your registration. Pre-registration is strongly recommended to secure your spot.",
   },
   {
     id: 2,
     question: "Is on-spot registration available?",
     answer:
-      "Yes, on-spot registration is available at the venue's registration desk, subject to availability of seats.",
+      "On-spot registration may be available, subject to seat capacity. Pre-registration is strongly recommended.",
   },
   {
     id: 3,
-    question: "Will I receive a confirmation after registration?",
+    question: "Can I present a research paper?",
     answer:
-      "Yes, you will receive a confirmation email and SMS with your registration details and a unique QR code upon successful registration.",
+      "Yes. Rushabhayan 3 will host curated research sessions. Submission guidelines and timelines will be announced on the Research page.",
   },
   {
     id: 4,
-    question: "How can I contact the Rushabhayan team?",
+    question: "Who should attend Rushabhayan?",
     answer:
-      "You can reach out to us via the contact form on our website or email us at support@rushabhayan.com for any queries.",
+      "Scholars, researchers, students, cultural institutions, and individuals interested in India's manuscript and knowledge traditions are encouraged to attend.",
+  },
+  {
+    id: 5,
+    question: "How can institutions collaborate?",
+    answer:
+      "Institutions and organisations may contact the Rushabhayan team through the Contact page to explore academic or partnership opportunities.",
   },
 ];
 

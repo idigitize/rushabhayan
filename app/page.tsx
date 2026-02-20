@@ -46,7 +46,7 @@ export default function Home() {
       <RecentlyPublished />
       <EventBanner />
       <FaqSection />
-      <MemberCTA />
+      {/* <MemberCTA /> */}
       <Footer />
     </div>
   );

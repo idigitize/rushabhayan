@@ -82,8 +82,9 @@ const HeroSection = () => {
         className="absolute inset-0 flex items-center  whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-[60%]"
         style={{ fontFamily: 'Didot, "Didot LT STD", "Hoefler Text", serif' }}
       >
-        A search for <span className=" italic mb-4">&nbsp;roots.&nbsp;</span> A
-        journey home.
+        A Search for Our{" "}
+        <span className=" italic mb-4">&nbsp;Roots.&nbsp;</span> A Purpose for
+        Our Future.
       </div>
 
       {/* Centered Image Frame */}

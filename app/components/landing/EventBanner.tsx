@@ -20,16 +20,30 @@ const EventBanner = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center h-full text-white">
         {/* Date & Location row with sparkle dividers */}
         <div className="flex items-center gap-3 mb-4 text-sm md:text-base font-medium tracking-widest text-gray-300 font-manrope uppercase">
-          <span>19 - 21 December, 2026</span>
-          <span>Mumbai, India</span>
+          <span>27 – 29 November, 2026</span>
+          <span>Baroda, Gujarat</span>
         </div>
-        <h2 className="text-5xl md:text-7xl text-[#f3e5d0] mb-6 font-didot uppercase">
+        <h2 className="text-5xl md:text-7xl text-[#f3e5d0] mb-4 font-didot uppercase">
           Rushabhayan 3
         </h2>
-        <p className="max-w-2xl text-lg md:text-xl leading-relaxed text-gray-200 mb-10 font-manrope  ">
-          Rushabhayan 2025 is an international conference and art forum
-          celebrating India's first teacher, Raja Rushabhdev... the man who gave
-          humanity its earliest systems of living, learning, and leadership.
+        <p className="max-w-2xl text-base md:text-lg font-semibold font-manrope uppercase text-gray-200 mb-3">
+          Expanded in Scope and Scholarship
+        </p>
+        <p className="max-w-2xl text-base md:text-lg font-semibold font-manrope uppercase text-gray-200 mb-3">
+          This edition brings:
+        </p>
+        <ul className="max-w-2xl text-sm md:text-base leading-relaxed text-gray-300 mb-10 font-manrope space-y-1 list-none">
+          <li>• Broader institutional partnerships</li>
+          <li>• A strengthened research framework</li>
+          <li>• A larger manuscript and archival showcase</li>
+          <li>• Expanded participation from scholars across India</li>
+          <li>
+            • Stronger collaboration with universities and emerging scholars
+          </li>
+        </ul>
+        <p className="max-w-2xl text-base md:text-lg  font-manrope   text-gray-200 mb-3">
+          Rushabhayan 3 builds on its foundation… with greater academic depth,
+          stronger collaborations, and wider national outreach
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -39,7 +53,7 @@ const EventBanner = () => {
               size="md"
               className="text-lg bg-cream-light text-brown-medium uppercase"
             >
-              Pre-register Now
+              REGISTER NOW
             </Button>
             <button className="frame-btn">
               <svg viewBox="0 0 500 120" preserveAspectRatio="none">
