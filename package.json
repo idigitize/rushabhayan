@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:main": "next start -p 3000",
+    "start:uat": "next start -p 3001",
+    "start:stage": "next start -p 3002",
     "lint": "eslint"
   },
   "dependencies": {
