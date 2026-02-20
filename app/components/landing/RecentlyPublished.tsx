@@ -2,41 +2,42 @@
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 import ArticleCard from "./ArticleCard";
+import Button from "../ui/Button";
 
 const publications = [
   {
     id: 1,
-    date: "24 January, 2026",
+    date: "15 January, 2026",
     category: "Philosophy",
     title: "Jain Philosophy and Ethics in the Modern World",
     image: "/assets/images/publication.png",
   },
   {
     id: 2,
-    date: "24 January, 2026",
+    date: "29 December, 2026",
     category: "Philosophy",
-    title: "Jain Philosophy and Ethics in the Modern World",
+    title: "Historical Evolution of Jain Thought and Its Cultural...",
     image: "/assets/images/publication.png",
   },
   {
     id: 3,
-    date: "24 January, 2026",
+    date: "15 January, 2026",
     category: "Philosophy",
-    title: "Jain Philosophy and Ethics in the Modern World",
+    title: "Jain Contributions to Science, Mathematics...",
     image: "/assets/images/publication.png",
   },
   {
     id: 4,
-    date: "24 January, 2026",
+    date: "15 January, 2026",
     category: "Philosophy",
-    title: "Jain Philosophy and Ethics in the Modern World",
+    title: "Preservation of Jain Heritage: Temples...",
     image: "/assets/images/publication.png",
   },
 ];
 
 const PublishedSection = () => {
   return (
-    <section className="bg-[#f3e5d0] flex flex-col p-8 z-10 md:p-16 font-manrope relative">
+    <section className=" flex flex-col p-8 z-10 md:p-16 font-manrope relative">
       <div className="max-w-7xl mx-auto z-50">
         {/* Header with Phosphor Navigation Icons */}
         <div className="flex justify-between items-center mb-10 h-20 z-30">
@@ -66,6 +67,15 @@ const PublishedSection = () => {
           {publications.map((item) => (
             <ArticleCard key={item.id} item={item} />
           ))}
+        </div>
+        <div className="flex justify-center align-center">
+          <Button
+            variant="primary"
+            size="sm"
+            className="text-lg  text-cream-light"
+          >
+            VIEW ALL RESEARCH
+          </Button>
         </div>
       </div>
     </section>

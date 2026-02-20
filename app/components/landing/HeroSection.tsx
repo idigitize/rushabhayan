@@ -17,7 +17,7 @@ const HeroSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "0 top",
+          start: "-15% top",
           end: "+=600%",
           scrub: 1,
           pin: true,
@@ -25,11 +25,15 @@ const HeroSection = () => {
         },
       });
 
-      tl.to(textRef.current, {
-        x: "-20%",
-        duration: 5,
-        ease: "power1.inOut",
-      });
+      tl.fromTo(
+        textRef.current,
+        { x: "30%" },
+        {
+          x: "-20%",
+          duration: 5,
+          ease: "power1.inOut",
+        },
+      );
 
       imagesRef.current.forEach((img: any, index: number) => {
         const randomRotation = (Math.random() * 12 - 6).toFixed(2);
@@ -66,11 +70,11 @@ const HeroSection = () => {
       {/* Moving Text Layer */}
       <div
         ref={textRef}
-        className="absolute inset-0 flex items-center whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none translate-x-[60%]"
+        className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-[6vw] text-[#3e2723] pointer-events-none"
         style={{ fontFamily: 'Didot, "Didot LT STD", "Hoefler Text", serif' }}
       >
-        A search for <span className=" italic">&nbsp;roots</span> A journey
-        home.
+        A search for our <span className="italic">&nbsp;roots.&nbsp;</span>
+        &nbsp;A purpose for our <span className="italic">&nbsp;future.</span>
       </div>
 
       {/* Centered Image Frame */}

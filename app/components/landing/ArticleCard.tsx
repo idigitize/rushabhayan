@@ -62,7 +62,7 @@ const ArticleCard = ({ item }: ArticleCardProps) => {
       onMouseLeave={onMouseLeave}
     >
       {/* Target area for the custom cursor/button */}
-      <div className="relative mb-6 flex flex-col gap-2 overflow-hidden bg-[#f8f1e5] rounded-lg">
+      <div className="relative mb-6 flex flex-col gap-2 overflow-hidden  rounded-lg">
         <img
           src={item.image}
           alt={item.title}

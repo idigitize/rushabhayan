@@ -6,7 +6,7 @@ import { Manrope } from "next/font/google";
 import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Rushabhayan - Premium Fashion",
+  title: "Rushabhayan - Home",
   description: "Discover the latest in premium fashion and accessories.",
 };
 

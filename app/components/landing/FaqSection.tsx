@@ -38,13 +38,7 @@ const FaqSection = () => {
 
   return (
     <section className="relative w-full py-16 md:py-24 overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40 mix-blend-multiply"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")`,
-          backgroundRepeat: "repeat",
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-multiply" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -71,7 +65,7 @@ const FaqSection = () => {
                     {number}
                   </span>
 
-                  <span className="flex-1 text-lg md:text-xl font-medium text-[#3e2723]/90 font-manrope pr-8">
+                  <span className="flex-1 text-lg md:text-xl font-semibold text-[#3e2723] font-manrope pr-8">
                     {faq.question}
                   </span>
 
@@ -92,7 +86,7 @@ const FaqSection = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pl-12 md:pl-20 pr-4 md:pr-12 text-[#5d4037] font-manrope leading-relaxed text-base md:text-lg">
+                    <div className="pl-12 md:pl-20 pr-4 md:pr-12 text-[#3e2723] font-medium font-manrope leading-relaxed text-base md:text-lg">
                       {faq.answer}
                     </div>
                   </div>

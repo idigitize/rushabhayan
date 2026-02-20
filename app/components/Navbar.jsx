@@ -42,7 +42,10 @@ const Navbar = () => {
           </div>
 
           <div className="flex-shrink-0 flex items-center justify-center md:justify-start">
-            <Link href="/" className="font-didot text-3xl tracking-tight">
+            <Link
+              href="/"
+              className="font-didot text-3xl tracking-tight  animate-navbar-logo"
+            >
               RUSHABHAYAN
             </Link>
           </div>
@@ -53,18 +56,20 @@ const Navbar = () => {
                 key={item.name}
                 className="group h-full flex items-center relative justify-center min-w-[80px]" // Added min-w for equal sizing preference
               >
-                <img
+                {/* <img
                   src="/assets/icons/menu_selected.svg"
                   alt="Selected"
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 object-cover"
-                />
+                /> */}
                 <Link
                   href={item.href}
-                  className={`inline-flex uppercase items-center font-medium group-hover:font-semibold font-manrope transition-all hover:text-brown-medium relative z-10 h-full  ${
-                    pathname === item.href
-                      ? "text-brown-darker font-bold"
-                      : "text-brown-dark"
-                  }`}
+                  className={`inline-flex uppercase items-center font-medium group-hover:font-semibold font-manrope transition-all hover:text-brown-medium relative z-10 h-full
+                    before:absolute before:bottom-[30%] before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-brown-dark before:transition-transform before:duration-300 hover:before:scale-x-100
+                    ${
+                      pathname === item.href
+                        ? "text-brown-darker font-bold before:scale-x-100"
+                        : "text-brown-dark"
+                    }`}
                 >
                   {item.name}
                   {item.megaMenu && (
@@ -73,7 +78,7 @@ const Navbar = () => {
                 </Link>
                 {item.megaMenu && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-7xl bg-cream-light border-t border-brown-dark/5 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
-                    <div className="mx-auto max-w-7xl px-8 py-12 grid grid-cols-4 gap-2">
+                    <div className="mx-auto max-w-7xl px-8 py-4 grid grid-cols-4 gap-2">
                       {item?.categories?.map((category, idx) => (
                         <div key={idx}>
                           <h3 className="font-didot text-lg mb-4 text-brown-darker">
@@ -126,10 +131,7 @@ const Navbar = () => {
         <div className="md:hidden fixed inset-0 top-20 z-40 bg-cream-light px-6 border-t border-brown-dark/10 overflow-y-auto">
           <div className="flex flex-col space-y-6 pt-6 pb-20">
             {navigation.map((item) => (
-              <div
-                key={item.name}
-                className="border-b border-brown-dark/10 pb-4"
-              >
+              <div key={item.name} className=" ">
                 <div
                   className="flex justify-between items-center"
                   onClick={() =>
