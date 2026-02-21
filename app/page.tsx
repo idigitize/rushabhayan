@@ -22,7 +22,7 @@ export default function Home() {
         className="object-cover fixed  z-0  inset-0 -z-10 w-screen h-screen"
       />
 
-      <div className="sticky top-0 z-50">
+      <div className="fixed w-full top-0 z-50">
         <Marquee />
         <Navbar />
       </div>
