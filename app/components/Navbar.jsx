@@ -30,24 +30,26 @@ const Navbar = () => {
     <nav className="relative text-brown-dark w-full z-100 border-b border-brown-dark/10 bg-[url('/assets/images/background.webp')] bg-cover bg-center bg-no-repeat ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          {/* Logo — left on both mobile and desktop */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link
+              href="/"
+              className="font-didot text-3xl tracking-tight animate-navbar-logo"
+            >
+              RUSHABHAYAN
+            </Link>
+          </div>
+
+          {/* Burger button — right side, mobile only */}
           <div className="flex items-center md:hidden">
             <button
               type="button"
-              className="p-2 -ml-2 text-brown-dark hover:text-brown-medium transition-colors relative z-50"
+              className="p-2 -mr-2 text-brown-dark hover:text-brown-medium transition-colors relative z-50"
               onClick={toggleMobileMenu}
             >
               <span className="sr-only">Open menu</span>
               {mobileMenuOpen ? <X size={24} /> : <List size={24} />}
             </button>
-          </div>
-
-          <div className="flex-shrink-0 flex items-center justify-center md:justify-start">
-            <Link
-              href="/"
-              className="font-didot text-3xl tracking-tight  animate-navbar-logo"
-            >
-              RUSHABHAYAN
-            </Link>
           </div>
 
           <div className="hidden md:flex flex-1 justify-end space-x-4 text-lg h-full items-center">

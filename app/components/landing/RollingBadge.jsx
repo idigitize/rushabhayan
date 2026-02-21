@@ -18,7 +18,7 @@ const RollingStamp = ({ text = "Find a great connection with God. " }) => {
   }, []);
 
   return (
-    <div className="flex absolute -bottom-20 right-4 sm:right-16 md:right-40 items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-[#5D3222] rounded-full">
+    <div className="flex absolute -bottom-20 right-20 sm:right-16 md:right-40 items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-[#5D3222] rounded-full">
       {/* Arrow Icon */}
       <div className="z-10 text-white">
         <svg
