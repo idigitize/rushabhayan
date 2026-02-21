@@ -98,13 +98,13 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-brown-medium z-20 font-manrope relative h-screen bg-black text-[#EBE3D5] border p-8 md:p-16 lg:p-24 min-h-screen"
+      className="bg-brown-medium z-20 font-manrope relative bg-black text-[#EBE3D5] border p-8 md:p-16 lg:p-24 py-16 md:py-20"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         {/* Left Column: Title & Nav */}
-        <div className="lg:col-span-4 space-y-12">
+        <div className="lg:col-span-4 space-y-8 lg:space-y-12">
           <div>
-            <h4 className="  text-lg mb-4 opacity-80 font-didot">
+            <h4 className="text-lg mb-4 opacity-80 font-didot">
               About <span className="italic">Us</span>
             </h4>
             <h2 className="text-3xl font-semibold md:text-5xl leading-tight">
@@ -117,7 +117,7 @@ const AboutSection = () => {
               <button
                 key={item.title}
                 onClick={() => handleCategoryClick(index)}
-                className={`text-left py-6 text-2xl transition-all border-b border-white/20 ${
+                className={`text-left py-4 md:py-6 text-xl md:text-2xl transition-all border-b border-white/20 ${
                   activeIndex === index
                     ? "opacity-100"
                     : "opacity-40 hover:opacity-70"
@@ -130,8 +130,8 @@ const AboutSection = () => {
         </div>
 
         {/* Center Column: Image with Curtain */}
-        <div className="lg:col-span-4 h-full">
-          <div className="relative aspect-[4/6] w-full overflow-hidden shadow-2xl">
+        <div className="block lg:col-span-4 h-full">
+          <div className="relative aspect-4/5 md:aspect-4/6 w-full overflow-hidden shadow-2xl">
             <div ref={imageRef} className="w-full h-full">
               <Image
                 src={categories[activeIndex].image}
@@ -149,26 +149,24 @@ const AboutSection = () => {
         </div>
 
         {/* Right Column: Description & CTA */}
-        <div className="lg:col-span-4 flex flex-col justify-between h-full pt-4 space-y-12">
-          <div ref={textContentRef} className="space-y-6">
-            <h3 className="text-xl font-bold uppercase tracking-wider">
+        <div className="lg:col-span-4 flex flex-col justify-between h-full pt-0 md:pt-4 space-y-8 lg:space-y-12">
+          <div ref={textContentRef} className="space-y-4 md:space-y-6">
+            <h3 className="text-lg md:text-xl font-bold uppercase tracking-wider">
               {categories[activeIndex].title}
             </h3>
-            <p className="text-lg leading-relaxed opacity-90 max-w-sm">
+            <p className="text-base md:text-lg leading-relaxed opacity-90">
               {categories[activeIndex].description}
             </p>
           </div>
 
-          <div className="pt-12">
-            <div className="hidden md:block pl-4">
-              <Button
-                variant="primary"
-                size="md"
-                className="text-lg bg-cream-light text-brown-medium"
-              >
-                CONNECT WITH US
-              </Button>
-            </div>
+          <div className="pt-4 md:pt-12">
+            <Button
+              variant="primary"
+              size="md"
+              className="text-lg bg-cream-light text-brown-medium w-full md:w-auto"
+            >
+              CONNECT WITH US
+            </Button>
           </div>
         </div>
       </div>

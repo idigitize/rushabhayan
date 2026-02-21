@@ -50,10 +50,10 @@ const StampComponent = () => {
     >
       <div
         ref={containerRef}
-        className="max-w-6xl pt-40 w-full px-10 md:px-20 block "
+        className="max-w-6xl pt-12 md:pt-40 w-full px-6 md:px-20 block"
       >
         {/* The Float: This makes the text wrap around the image */}
-        <div className="float-left mr-10  -mt-64 w-[200px] md:w-[320px]">
+        <div className="float-left mr-6 md:mr-10 -mt-16 md:-mt-64 w-[120px] md:w-[320px]">
           <Image
             src="/assets/icons/Stamp.svg"
             alt="Stamp"
@@ -67,11 +67,11 @@ const StampComponent = () => {
         {/* The Text: Needs to be block-level for the float to work */}
         <p
           ref={textRef}
-          className="text-3xl  md:text-[48px] leading-[1.4] font-serif text-left"
+          className="text-xl sm:text-3xl md:text-[48px] leading-[1.4] font-serif text-left"
           style={{ fontFamily: "Didot, serif" }}
         >
           {renderChars(
-            "Rushabhayan is an international conference and art forum celebrating India’s first teacher, ",
+            "Rushabhayan is an international conference and art forum celebrating India's first teacher, ",
           )}
           {renderChars("Raja Rushabhdev...", true)}
           {renderChars(" the man who gave humanity its earliest systems of ")}

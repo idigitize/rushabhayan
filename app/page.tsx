@@ -29,12 +29,21 @@ export default function Home() {
 
       <HeroSection />
 
-      <div className="relative z-20   h-screen ">
+      <div className="relative z-20 h-[50vh] sm:h-screen md:h-screen">
+        {/* Mobile mask */}
+        <Image
+          src="/assets/images/mobile-mask.png"
+          alt="Image"
+          fill
+          className="object-contain fixed inset-0 -z-10 pointer-events-none md:hidden"
+          priority
+        />
+        {/* Desktop mask */}
         <Image
           src="/assets/images/maskImage.png"
           alt="Image"
           fill
-          className="object-cover fixed inset-0 -z-10 pointer-events-none"
+          className="object-cover fixed inset-0 -z-10 pointer-events-none hidden md:block"
           priority
         />
 

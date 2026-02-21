@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 const EventBanner = () => {
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-auto md:h-[700px] flex items-center justify-center overflow-hidden py-10">
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/Second Banner.jpg"
@@ -19,11 +19,11 @@ const EventBanner = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center h-full text-white">
         {/* Date & Location row with sparkle dividers */}
-        <div className="flex items-center gap-3 mb-4 text-sm md:text-base font-medium tracking-widest text-gray-300 font-manrope uppercase">
+        <div className="flex items-center gap-3 mb-4 text-xs md:text-base font-medium tracking-widest text-gray-300 font-manrope uppercase">
           <span>27 – 29 November, 2026</span>
           <span>Baroda, Gujarat</span>
         </div>
-        <h2 className="text-5xl md:text-7xl text-[#f3e5d0] mb-4 font-didot uppercase">
+        <h2 className="text-3xl md:text-7xl text-[#f3e5d0] mb-4 font-didot uppercase">
           Rushabhayan 3
         </h2>
         <p className="max-w-2xl text-base md:text-lg font-semibold font-manrope uppercase text-gray-200 mb-3">
@@ -47,6 +47,17 @@ const EventBanner = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
+          {/* Mobile-only: simple register button */}
+          <div className="flex md:hidden">
+            <Button
+              variant="primary"
+              size="md"
+              className="text-lg bg-cream-light text-brown-medium uppercase"
+            >
+              REGISTER NOW
+            </Button>
+          </div>
+          {/* Desktop: fancy framed button layout */}
           <div className="hidden md:flex items-center gap-3">
             <Button
               variant="primary"
@@ -62,7 +73,7 @@ const EventBanner = () => {
 M 22 1 H 478 Q 478 23 501 22 V 94 Q 478 95 479 119 H 24 Q 23 97 0 98 V 24 M 0 24 Q 22 24 22 1 M 500 85"
                   fill="none"
                   stroke="#e6d5b8"
-                  stroke-width="4"
+                  strokeWidth="4"
                 />
               </svg>
               <span>VIEW DETAILS</span>

@@ -128,7 +128,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 z-40 bg-cream-light px-6 border-t border-brown-dark/10 overflow-y-auto">
+        <div className="md:hidden fixed inset-0 top-[116px] z-40 bg-cream-light px-6 border-t border-brown-dark/10 overflow-y-auto">
           <div className="flex flex-col space-y-6 pt-6 pb-20">
             {navigation.map((item) => (
               <div key={item.name} className=" ">
