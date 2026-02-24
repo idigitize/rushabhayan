@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const sizes = {
     sm: "px-2 py-2 text-sm",
-    md: "px-2 py-3 text-base",
+    md: "px-4 py-3 text-base",
     lg: "px-10 py-4 text-lg",
   };
 
@@ -60,13 +60,20 @@ const Button: React.FC<ButtonProps> = ({
       style={invertedCornerStyle}
       {...props}
     >
-      <span className="flex items-center gap-2 relative z-10">
-        {children}
-        {icon && (
-          <span className="transition-transform group-hover:translate-x-1">
-            {icon}
-          </span>
-        )}
+      <span className="flex items-center justify-center relative w-full h-full z-10">
+        {/* Original Content */}
+        <span className="transition-opacity duration-300 group-hover:opacity-0 flex items-center gap-2">
+          {children}
+          {icon && (
+            <span className="transition-transform group-hover:translate-x-1">
+              {icon}
+            </span>
+          )}
+        </span>
+        {/* Coming Soon Text */}
+        <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+          Coming Soon
+        </span>
       </span>
     </button>
   );

@@ -108,7 +108,7 @@ const AboutSection = () => {
               About <span className="italic">Us</span>
             </h4>
             <h2 className="text-[48px] font-semibold md:text-[48px] leading-tight">
-              How we bring changes together
+              How We Bring Changes Together
             </h2>
           </div>
 

@@ -46,7 +46,7 @@ const EventBanner = () => {
             </Button>
           </div> */}
           {/* Desktop: fancy framed button layout */}
-          <div className=" scale-90 flex flex-col sm:flex-row   gap-6">
+          <div className=" scale-90 flex flex-col sm:flex-row  md:-ml-8 gap-6">
             <Button
               variant="primary"
               size="sm"
@@ -55,7 +55,7 @@ const EventBanner = () => {
               PRE-REGISTER NOW
             </Button>
 
-            <button className="frame-btn min-w-[280px] h-[54px] relative flex items-center justify-center">
+            <button className="frame-btn min-w-[280px] h-[54px] relative flex items-center justify-center group">
               <svg
                 viewBox="0 0 500 120"
                 preserveAspectRatio="none"
@@ -68,7 +68,12 @@ const EventBanner = () => {
                   strokeWidth="4"
                 />
               </svg>
-              <span className="relative z-10 text-lg">VIEW DETAILS</span>
+              <span className="relative z-10 text-lg transition-opacity duration-300 group-hover:opacity-0">
+                VIEW DETAILS
+              </span>
+              <span className="absolute inset-0 z-10 flex items-center -mt-5 justify-center text-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap uppercase">
+                Coming Soon
+              </span>
             </button>
           </div>
         </div>
