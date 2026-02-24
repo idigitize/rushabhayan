@@ -17,16 +17,9 @@ const HeroSection = () => {
   // so there is zero flicker – GSAP initial states are in place before
   // the first frame is drawn.
   useLayoutEffect(() => {
-    // Measure the sticky navbar/marquee height so we can offset the
-    // ScrollTrigger start. The HeroSection sits in DOM flow after the
-    // sticky nav, meaning its top is navHeight px below the viewport top.
-    // By setting  start: "top <navHeight>px"  we tell GSAP to pin when the
-    // section top is still navHeight from the viewport top — i.e. at scrollY=0.
-    const navEl = sectionRef.current
-      ?.previousElementSibling as HTMLElement | null;
-    const navHeight = navEl ? navEl.getBoundingClientRect().height : 0;
+    let mm = gsap.matchMedia();
 
-    const ctx = gsap.context(() => {
+    const createAnimation = (isMobile: boolean) => {
       // ── STAGE 0: set initial state before any scroll ─────────────────
       gsap.set(containerRef.current, { scale: 0.55 });
       gsap.set(leftGateRef.current, { x: "0%" });
@@ -41,45 +34,36 @@ const HeroSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          // Fire as soon as the section top is navHeight from viewport top —
-          // that's scrollY=0, so the pin is instant.
-          // start: `top ${navHeight}px`,
           start: "top top",
-          end: "+=300%",
+          end: isMobile ? "+=150%" : "+=300%",
           scrub: 1.2,
           pin: true,
           pinSpacing: true,
         },
       });
 
-      // ── SMOOTH CONTINUOUS ANIMATION ──────────────────────────────────
-      // Rule: with scrub, always use ease:"none". The scrub itself handles
-      // smoothness — per-segment eases cause jerks at each boundary.
-      // All tweens run from 0→end with overlapping durations so every
-      // property moves continuously throughout the full scroll.
+      const DUR = 3;
 
-      const DUR = 3; // timeline duration units
-
-      // Container zoom: 0.55 → 1.2
+      // Container zoom
       tl.to(
         containerRef.current,
-        { scale: 1.2, ease: "none", duration: DUR },
+        { scale: isMobile ? 0.85 : 1.2, ease: "none", duration: DUR },
         0,
       );
 
-      // Gates: spread 0% → ±100%
+      // Gates spread
       tl.to(
         leftGateRef.current,
-        { x: "-100%", ease: "none", duration: DUR },
+        { x: isMobile ? "-85%" : "-100%", ease: "none", duration: DUR },
         0,
       );
       tl.to(
         rightGateRef.current,
-        { x: "100%", ease: "none", duration: DUR },
+        { x: isMobile ? "85%" : "100%", ease: "none", duration: DUR },
         0,
       );
 
-      // Behind text: fade in over first third, blur 80→0 over full scroll
+      // Behind text
       tl.to(
         behindTextRef.current,
         { opacity: 1, ease: "none", duration: DUR * 0.4 },
@@ -91,7 +75,7 @@ const HeroSection = () => {
         0,
       );
 
-      // Raja: fade in over first third, scale + blur clear over full scroll
+      // Raja
       tl.to(
         rajaRef.current,
         { opacity: 1, ease: "none", duration: DUR * 0.4 },
@@ -102,9 +86,17 @@ const HeroSection = () => {
         { scale: 1.05, filter: "blur(0px)", ease: "none", duration: DUR * 0.4 },
         0,
       );
-    }, sectionRef);
+    };
 
-    return () => ctx.revert();
+    mm.add("(max-width: 767px)", () => {
+      createAnimation(true);
+    });
+
+    mm.add("(min-width: 768px)", () => {
+      createAnimation(false);
+    });
+
+    return () => mm.revert();
   }, []);
 
   return (
@@ -154,7 +146,7 @@ const HeroSection = () => {
         {/* ── Raja Rushabhdev Image ── */}
         <div
           ref={rajaRef}
-          className="absolute inset-0 flex items-end justify-center z-20 pointer-events-none"
+          className="absolute inset-0 flex items-center md:items-end justify-center z-20 pointer-events-none"
           style={{
             opacity: 0,
             filter: "blur(40px)",
@@ -166,15 +158,15 @@ const HeroSection = () => {
           <img
             src="/assets/images/raja-rushabhdev.png"
             alt="Raja Rushabhdev"
-            className="object-contain object-bottom"
-            style={{ height: "92%", width: "auto", maxWidth: "none" }}
+            className="object-contain object-bottom h-[40%] md:h-[92%]"
+            style={{ width: "auto", maxWidth: "none" }}
           />
         </div>
 
         {/* ── Left Gate ── */}
         <div
           ref={leftGateRef}
-          className="absolute inset-y-0 left-0 z-30 pointer-events-none"
+          className="absolute inset-y-0 left-0 z-30 pointer-events-none flex items-center justify-end"
           style={{
             width: "50%",
             willChange: "transform",
@@ -185,7 +177,7 @@ const HeroSection = () => {
           <img
             src="/assets/images/left-gate.png"
             alt="Left Gate"
-            className="h-full w-full object-cover object-right"
+            className="w-[425%] sm:w-[140%] md:w-full max-w-none md:max-w-full h-auto md:h-full md:object-cover object-right"
             draggable={false}
           />
         </div>
@@ -193,7 +185,7 @@ const HeroSection = () => {
         {/* ── Right Gate ── */}
         <div
           ref={rightGateRef}
-          className="absolute inset-y-0 right-0 z-30 pointer-events-none"
+          className="absolute inset-y-0 right-0 z-30 pointer-events-none flex items-center justify-start"
           style={{
             width: "50%",
             willChange: "transform",
@@ -204,7 +196,7 @@ const HeroSection = () => {
           <img
             src="/assets/images/right-gate.png"
             alt="Right Gate"
-            className="h-full w-full object-cover object-left"
+            className="w-[425%] sm:w-[140%] md:w-full max-w-none md:max-w-full h-auto md:h-full md:object-cover object-left"
             draggable={false}
           />
         </div>

@@ -79,7 +79,7 @@ const ArticleCard = ({ item }: ArticleCardProps) => {
           </span>
         </div>
 
-        <h3 className="text-lg sm:text-xl px-4 pb-6 pt-2 font-didot leading-tight text-gray-900 group-hover:text-[#5c3a21] transition-colors duration-300">
+        <h3 className="text-xl sm:text-xl px-4 pb-6 pt-2 font-didot leading-tight text-gray-900 group-hover:text-[#5c3a21] transition-colors duration-300">
           {item.title}
         </h3>
 

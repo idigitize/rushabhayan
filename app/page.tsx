@@ -29,7 +29,7 @@ export default function Home() {
 
       <HeroSection />
 
-      <div className="relative z-20 h-[50vh] sm:h-screen md:h-screen">
+      <div className="relative z-20 h-[50vh] mx-4  md:mx-7 sm:h-screen md:h-screen">
         {/* Mobile mask */}
         <Image
           src="/assets/images/mobile-mask.png"

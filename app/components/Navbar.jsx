@@ -11,6 +11,7 @@ import {
   X,
 } from "@phosphor-icons/react";
 import Button from "./ui/Button";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/", megaMenu: false },
@@ -48,7 +49,16 @@ const Navbar = () => {
               onClick={toggleMobileMenu}
             >
               <span className="sr-only">Open menu</span>
-              {mobileMenuOpen ? <X size={24} /> : <List size={24} />}
+              {mobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Image
+                  src="/assets/icons/menu.svg"
+                  alt="Menu"
+                  width={24}
+                  height={24}
+                />
+              )}
             </button>
           </div>
 
@@ -79,7 +89,7 @@ const Navbar = () => {
                   )}
                 </Link>
                 {item.megaMenu && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-7xl bg-cream-light border-t border-brown-dark/5 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-7xl   border-t border-brown-dark/5 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
                     <div className="mx-auto max-w-7xl px-8 py-4 grid grid-cols-4 gap-2">
                       {item?.categories?.map((category, idx) => (
                         <div key={idx}>
@@ -130,7 +140,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[116px] z-40 bg-cream-light px-6 border-t border-brown-dark/10 overflow-y-auto">
+        <div className="md:hidden fixed inset-0 top-[116px] z-40 bg-cream-light/80 backdrop-blur-lg px-6 border-t border-brown-dark/10 overflow-y-auto">
           <div className="flex flex-col space-y-6 pt-6 pb-20">
             {navigation.map((item) => (
               <div key={item.name} className=" ">

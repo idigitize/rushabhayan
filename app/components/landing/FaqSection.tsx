@@ -48,12 +48,12 @@ const FaqSection = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-[#3e2723] font-didot">
+          <h2 className="text-4xl md:text-5xl text-[#5E2A16] font-didot">
             Frequently Asked <span className="italic">Questions</span>
           </h2>
         </div>
 
-        <div className="flex flex-col border-t border-[#3e2723]/20">
+        <div className="flex flex-col border-t border-[#463E2D]/40 ">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             const number = (index + 1).toString().padStart(2, "0");
@@ -61,21 +61,21 @@ const FaqSection = () => {
             return (
               <div
                 key={faq.id}
-                className="border-b border-[#3e2723]/20 transition-colors duration-300"
+                className="border-b-2 border-[#463E2D]/40 transition-colors duration-300"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full flex items-start md:items-center py-6 md:py-8 text-left group focus:outline-none"
                 >
-                  <span className="text-xl md:text-2xl font-didot text-[#3e2723] mr-6 md:mr-10 opacity-70">
+                  <span className="text-xl md:text-2xl font-didot text-[#5E2A16] mr-6 md:mr-10  ">
                     {number}
                   </span>
 
-                  <span className="flex-1 text-lg md:text-xl font-semibold text-[#3e2723] font-manrope pr-8">
+                  <span className="flex-1 text-lg md:text-xl font-semibold text-[#5E2A16] font-manrope pr-8">
                     {faq.question}
                   </span>
 
-                  <span className="mt-1 md:mt-0 text-[#3e2723] transition-transform duration-300">
+                  <span className="mt-1 md:mt-0 text-[#5E2A16] transition-transform duration-300">
                     {isOpen ? (
                       <CaretUp size={24} weight="light" />
                     ) : (
@@ -92,7 +92,7 @@ const FaqSection = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pl-12 md:pl-20 pr-4 md:pr-12 text-[#3e2723] font-medium font-manrope leading-relaxed text-base md:text-lg">
+                    <div className="pl-12 md:pl-20 pr-4 md:pr-12 text-[#5E2A16] font-medium font-manrope leading-relaxed text-base md:text-lg">
                       {faq.answer}
                     </div>
                   </div>

@@ -14,17 +14,17 @@ const EventBanner = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/90 md:bg-black/50" />{" "}
+        <div className="absolute inset-0 bg-black/20 md:bg-black/20" />{" "}
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-4 flex flex-col justify-center h-full text-white">
+      <div className="relative z-10 w-full scale-90 max-w-7xl mx-auto px-6 md:px-4 flex flex-col justify-center h-full text-white">
         {/* Date & Location row with sparkle dividers */}
-        <div className="flex items-center gap-4 mb-6 text-xs md:text-sm font-medium tracking-widest text-gray-300 font-manrope">
+        <div className="flex font-manrope items-center gap-4 mb-6 font-medium  text-gray-300 font-manrope">
           <span>19 - 21 December, 2026</span>
-          <div className="h-px w-24 bg-white" />
+          <div className="h-[1.8px] w-24 bg-white" />
           <span>Mumbai, India</span>
         </div>
-        <h2 className="text-4xl md:text-8xl text-[#f3e5d0] mb-8 font-didot">
+        <h2 className="text-5xl md:text-6xl text-white mb-8 font-didot">
           Rushabhayan 3
         </h2>
         <p className="max-w-4xl text-lg md:text-2xl leading-relaxed text-white/90 font-manrope mb-10">
@@ -36,7 +36,7 @@ const EventBanner = () => {
 
         <div className="flex flex-col sm:flex-row gap-6">
           {/* Mobile-only: simple register button */}
-          <div className="flex md:hidden">
+          {/* <div className="flex md:hidden">
             <Button
               variant="primary"
               size="md"
@@ -44,9 +44,9 @@ const EventBanner = () => {
             >
               PRE-REGISTER NOW
             </Button>
-          </div>
+          </div> */}
           {/* Desktop: fancy framed button layout */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="   flex flex-col sm:flex-row md:items-center gap-6">
             <Button
               variant="primary"
               size="md"

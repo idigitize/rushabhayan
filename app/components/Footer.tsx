@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1e1c16] relative z-30 text-[#eaddc5] py-16 px-6 md:px-16 font-manrope">
+    <footer className="bg-[#28271F] relative z-30 text-[#eaddc5] py-16 px-6 md:px-16 font-manrope">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-24">
         <div className="flex flex-col gap-6 md:w-1/3">
           <div>
@@ -20,42 +20,42 @@ const Footer = () => {
           <div className="flex gap-4 mt-2">
             <Link
               href="#"
-              className="p-2 bg-[#f3e5d0] text-[#1e1c16] rounded-full hover:bg-white transition-colors"
+              className="p-2 bg-[#f3e5d0] text-[#5E2A16] rounded-full hover:bg-white transition-colors"
               aria-label="YouTube"
             >
               <YoutubeLogo size={20} weight="fill" />
             </Link>
             <Link
               href="#"
-              className="p-2 bg-[#f3e5d0] text-[#1e1c16] rounded-full hover:bg-white transition-colors"
+              className="p-2 bg-[#f3e5d0] text-[#5E2A16] rounded-full hover:bg-white transition-colors"
               aria-label="X (Twitter)"
             >
               <XLogo size={20} weight="fill" />
             </Link>
             <Link
               href="#"
-              className="p-2 bg-[#f3e5d0] text-[#1e1c16] rounded-full hover:bg-white transition-colors"
+              className="p-2 bg-[#f3e5d0] text-[#5E2A16] rounded-full hover:bg-white transition-colors"
               aria-label="Instagram"
             >
               <InstagramLogo size={20} weight="fill" />
             </Link>
           </div>
 
-          <div className="mt-8 md:mt-12 text-sm text-[#a89f91]">
+          <div className="mt-8 md:mt-12 text-sm text-[#FFF2D6] opacity-40 font-manrope ">
             &copy; 2026 Rushabhayan Foundation. All rights reserved.
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:w-2/3 md:justify-end">
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold tracking-wider text-[#a89f91] uppercase mb-2">
+            <h3 className="text-sm  tracking-wider text-[#FFF2D6] uppercase mb-2">
               Menu
             </h3>
-            <ul className="flex flex-col gap-3 text-[#f3e5d0]/90">
+            <ul className="flex flex-col gap-3 text-[#FFF2D6]/40">
               <li>
                 <Link
                   href="/"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Home
                 </Link>
@@ -63,7 +63,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   About Us
                 </Link>
@@ -71,7 +71,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/research"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Research
                 </Link>
@@ -79,7 +79,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/events"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Events
                 </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Frequently Asked Questions
                 </Link>
@@ -95,7 +95,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -104,14 +104,14 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold tracking-wider text-[#a89f91] uppercase mb-2">
+            <h3 className="text-sm  tracking-wider text-[#FFF2D6] uppercase mb-2">
               Get Connected
             </h3>
-            <ul className="flex flex-col gap-3 text-[#f3e5d0]/90">
+            <ul className="flex flex-col gap-3 text-[#FFF2D6]/40">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#f3e5d0] transition-colors"
+                  className="hover:text-[#FFF2D6]  transition-colors"
                 >
                   Newsletter
                 </Link>

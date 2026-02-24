@@ -98,26 +98,26 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-brown-medium z-20 font-manrope relative bg-black text-[#EBE3D5] border p-8 md:p-16 lg:p-24 py-16 md:py-20"
+      className="bg-[#463E2D] z-20  font-manrope relative  text-[#EBE3D5]  w-full  p-4 md:p-16 lg:p-8 py-16 md:py-50"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+      <div className="   my-10 grid w-full  grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         {/* Left Column: Title & Nav */}
-        <div className="lg:col-span-4 space-y-8 lg:space-y-12">
+        <div className="lg:col-span-4  space-y-8 lg:space-y-12 flex flex-col justify-between h-full ">
           <div>
-            <h4 className="text-2xl mb-4 opacity-80 font-didot">
+            <h4 className="text-2xl mb-4   font-didot text-[#FFF2D6]">
               About <span className="italic">Us</span>
             </h4>
-            <h2 className="text-3xl font-semibold md:text-4xl leading-tight">
+            <h2 className="text-3xl font-semibold md:text-5xl leading-tight">
               How we bring changes together
             </h2>
           </div>
 
-          <nav className="flex flex-col border-t border-white/20">
+          <nav className="flex flex-col   ">
             {categories.map((item, index) => (
               <button
                 key={item.title}
                 onClick={() => handleCategoryClick(index)}
-                className={`text-left py-4 md:py-6 text-xl md:text-2xl transition-all border-b border-white/20 ${
+                className={`text-left py-4 md:py-6 text-xl md:text-2xl font-semibold transition-all border-b border-white/20 ${
                   activeIndex === index
                     ? "opacity-100"
                     : "opacity-40 hover:opacity-70"
@@ -163,7 +163,7 @@ const AboutSection = () => {
             <Button
               variant="primary"
               size="md"
-              className="text-lg bg-cream-light text-brown-medium w-full md:w-auto"
+              className="text-lg bg-cream-light text-brown-medium w-fit md:w-auto"
             >
               CONNECT WITH US
             </Button>

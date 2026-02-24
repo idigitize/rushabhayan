@@ -46,14 +46,14 @@ const StampComponent = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-20 w-full h-screen flex items-center justify-center overflow-hidden bg-transparent"
+      className="relative z-20 w-full min-h-[60vh] md:h-screen flex items-center justify-center overflow-hidden bg-transparent"
     >
       <div
         ref={containerRef}
-        className="max-w-6xl pt-12 md:pt-40 w-full px-6 md:px-20 block"
+        className="max-w-6xl py-20 sm:pt-12 md:pt-40 w-full px-6 sm:px-10 md:px-20 block"
       >
         {/* The Float: This makes the text wrap around the image */}
-        <div className="float-left mr-6 md:mr-10 -mt-16 md:-mt-64 w-[120px] md:w-[320px]">
+        <div className="float-left mr-4 sm:mr-6 md:mr-10 mt-0 sm:-mt-10 md:-mt-56 w-[150px] sm:w-[160px] md:w-[320px] mb-2 sm:mb-0">
           <Image
             src="/assets/icons/Stamp.svg"
             alt="Stamp"
@@ -67,7 +67,7 @@ const StampComponent = () => {
         {/* The Text: Needs to be block-level for the float to work */}
         <p
           ref={textRef}
-          className="text-xl sm:text-3xl md:text-[48px] leading-[1.4] font-serif text-left"
+          className="pt-20 md:pt-0 text-3xl md:text-[48px] leading-normal sm:leading-[1.4] font-serif text-left"
           style={{ fontFamily: "Didot, serif" }}
         >
           {renderChars(

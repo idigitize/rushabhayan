@@ -18,9 +18,9 @@ const RollingStamp = ({ text = "Find a great connection with God. " }) => {
   }, []);
 
   return (
-    <div className="flex absolute -bottom-20 right-20 sm:right-16 md:right-40 items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-[#5D3222] rounded-full">
+    <div className="flex absolute -bottom-20 right-10 md:right-20 sm:right-16 md:right-40 items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-[#5D3222] rounded-full">
       {/* Arrow Icon */}
-      <div className="z-10 text-white">
+      <div className="z-10 text-[#FFF2D6]">
         <svg
           width="60"
           height="60"
@@ -39,7 +39,7 @@ const RollingStamp = ({ text = "Find a great connection with God. " }) => {
         {characters.map((char, i) => (
           <span
             key={i}
-            className="absolute text-sm md:text-base left-1/2 top-0 font-bold origin-[50%_64px] md:origin-[50%_80px] scale-125 md:scale-150 font-medium text-[#5D3222]"
+            className="absolute text-base left-1/2 top-0 font-bold origin-[30%_70px] md:origin-[50%_80px] scale-150 md:scale-150 font-medium text-[#5D3222]"
             style={{
               transform: `translateX(-50%) rotate(${i * degreeStep}deg)`,
             }}
