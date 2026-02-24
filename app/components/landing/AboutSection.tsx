@@ -98,16 +98,16 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#463E2D] z-20  font-manrope relative  text-[#EBE3D5]  w-full  p-4 md:p-16 lg:p-8 py-16 md:py-50"
+      className="bg-[#463E2D] z-20 min-w-screen  font-manrope relative  text-[#EBE3D5]  w-full  p-4 md:p-16 lg:p-8 py-16 md:py-50"
     >
       <div className="   my-10 grid w-full  grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         {/* Left Column: Title & Nav */}
         <div className="lg:col-span-4  space-y-8 lg:space-y-12 flex flex-col justify-between h-full ">
           <div>
-            <h4 className="text-2xl mb-4   font-didot text-[#FFF2D6]">
+            <h4 className="text-[32px] mb-4   font-didot text-[#FFF2D6]">
               About <span className="italic">Us</span>
             </h4>
-            <h2 className="text-3xl font-semibold md:text-5xl leading-tight">
+            <h2 className="text-[48px] font-semibold md:text-[48px] leading-tight">
               How we bring changes together
             </h2>
           </div>
@@ -117,13 +117,13 @@ const AboutSection = () => {
               <button
                 key={item.title}
                 onClick={() => handleCategoryClick(index)}
-                className={`text-left py-4 md:py-6 text-xl md:text-2xl font-semibold transition-all border-b border-white/20 ${
+                className={`text-left py-4 md:py-6 text-[32px] font-semibold transition-all border-b border-white/20 ${
                   activeIndex === index
                     ? "opacity-100"
                     : "opacity-40 hover:opacity-70"
                 }`}
               >
-                {item.title}
+                {item.title}s
               </button>
             ))}
           </nav>
@@ -151,11 +151,11 @@ const AboutSection = () => {
         {/* Right Column: Description & CTA */}
         <div className="lg:col-span-4 flex flex-col justify-between h-full pt-0 md:pt-4 space-y-8 lg:space-y-12">
           <div ref={textContentRef} className="space-y-4 md:space-y-6">
-            <h3 className="text-lg md:text-xl font-bold uppercase tracking-wider">
+            <h3 className="text-[24px] text-[#FFF2D6]  font-semibold  tracking-wider">
               {categories[activeIndex].title}
             </h3>
-            <p className="text-base md:text-lg leading-relaxed opacity-90">
-              {categories[activeIndex].description}
+            <p className="text-[#FFF2D6] text-[24px] leading-relaxed opacity-90">
+              {categories[activeIndex].description}s
             </p>
           </div>
 
@@ -163,7 +163,7 @@ const AboutSection = () => {
             <Button
               variant="primary"
               size="md"
-              className="text-lg bg-cream-light text-brown-medium w-fit md:w-auto"
+              className="text-[24px] bg-cream-light text-brown-medium w-fit md:w-auto"
             >
               CONNECT WITH US
             </Button>

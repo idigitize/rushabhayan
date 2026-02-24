@@ -54,12 +54,12 @@ const HeroSection = () => {
       // Gates spread
       tl.to(
         leftGateRef.current,
-        { x: isMobile ? "-85%" : "-100%", ease: "none", duration: DUR },
+        { x: isMobile ? "-155%" : "-100%", ease: "none", duration: DUR },
         0,
       );
       tl.to(
         rightGateRef.current,
-        { x: isMobile ? "85%" : "100%", ease: "none", duration: DUR },
+        { x: isMobile ? "155%" : "100%", ease: "none", duration: DUR },
         0,
       );
 
@@ -102,7 +102,7 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 h-screen w-full overflow-hidden"
+      className="relative z-10 h-screen max-w-screen w-full overflow-hidden"
       style={{ background: "transparent" }}
     >
       {/* Scale-container – inline initial styles match gsap.set()

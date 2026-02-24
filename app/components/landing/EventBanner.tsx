@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 const EventBanner = () => {
   return (
-    <section className="relative w-full h-auto md:h-[700px] flex items-center justify-center overflow-hidden py-10">
+    <section className="relative w-full h-auto min-w-screen md:h-[700px] flex items-center justify-center overflow-hidden py-10">
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/event.png"
@@ -24,10 +24,10 @@ const EventBanner = () => {
           <div className="h-[1.8px] w-24 bg-white" />
           <span>Mumbai, India</span>
         </div>
-        <h2 className="text-5xl md:text-6xl text-white mb-8 font-didot">
+        <h2 className="text-[50px] md:text-[54px] text-white mb-8 font-didot">
           Rushabhayan 3
         </h2>
-        <p className="max-w-4xl text-lg md:text-2xl leading-relaxed text-white/90 font-manrope mb-10">
+        <p className="max-w-4xl text-[22px] md:text-[24px] leading-relaxed text-white/90 font-manrope mb-10">
           Rushabhayan 2025 is an international conference and art forum
           celebrating India&apos;s first teacher, Raja Rushabhdev... the man who
           gave humanity its earliest systems of living, learning, and
@@ -46,15 +46,16 @@ const EventBanner = () => {
             </Button>
           </div> */}
           {/* Desktop: fancy framed button layout */}
-          <div className="   flex flex-col sm:flex-row md:items-center gap-6">
+          <div className=" scale-90 flex flex-col sm:flex-row   gap-6">
             <Button
               variant="primary"
-              size="md"
-              className="w-72 text-lg bg-cream-light text-brown-medium uppercase py-4"
+              size="sm"
+              className="w-72 text-[20px] bg-cream-light  text-brown-medium uppercase "
             >
               PRE-REGISTER NOW
             </Button>
-            <button className="frame-btn min-w-[280px] h-[64px] relative flex items-center justify-center">
+
+            <button className="frame-btn min-w-[280px] h-[54px] relative flex items-center justify-center">
               <svg
                 viewBox="0 0 500 120"
                 preserveAspectRatio="none"

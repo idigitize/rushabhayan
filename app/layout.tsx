@@ -23,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"antialiased font-manrope " + manrope.className}>
+      <body
+        className={
+          "antialiased font-manrope  overflow-x-hidden" + manrope.className
+        }
+      >
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

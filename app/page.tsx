@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full max-w-screen">
+    <div className="relative min-h-screen w-full max-w-screen overflow-hidden">
       <Image
         src="/assets/images/background.webp"
         alt="Background"

@@ -9,9 +9,6 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-24">
         <div className="flex flex-col gap-6 md:w-1/3">
           <div>
-            <span className="text-sm tracking-wide text-[#a89f91] uppercase">
-              Managed by
-            </span>
             <h2 className="text-3xl md:text-4xl font-didot mt-2 tracking-wide text-[#f3e5d0]">
               RUSHABHAYAN
             </h2>
