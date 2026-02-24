@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/about"
                   className="hover:text-[#f3e5d0] transition-colors"
                 >
                   About Us
@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/research"
                   className="hover:text-[#f3e5d0] transition-colors"
                 >
                   Research
@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/events"
                   className="hover:text-[#f3e5d0] transition-colors"
                 >
                   Events

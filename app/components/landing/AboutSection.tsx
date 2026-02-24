@@ -104,11 +104,11 @@ const AboutSection = () => {
         {/* Left Column: Title & Nav */}
         <div className="lg:col-span-4 space-y-8 lg:space-y-12">
           <div>
-            <h4 className="text-lg mb-4 opacity-80 font-didot">
+            <h4 className="text-2xl mb-4 opacity-80 font-didot">
               About <span className="italic">Us</span>
             </h4>
-            <h2 className="text-3xl font-semibold md:text-5xl leading-tight">
-              How Is It <span className="italic">Curated?</span>
+            <h2 className="text-3xl font-semibold md:text-4xl leading-tight">
+              How we bring changes together
             </h2>
           </div>
 

@@ -87,7 +87,7 @@ const HeroSection = () => {
       );
       tl.to(
         behindTextRef.current,
-        { filter: "blur(0px)", ease: "none", duration: DUR },
+        { filter: "blur(0px)", ease: "none", duration: DUR * 0.4 },
         0,
       );
 
@@ -99,7 +99,7 @@ const HeroSection = () => {
       );
       tl.to(
         rajaRef.current,
-        { scale: 1.05, filter: "blur(0px)", ease: "none", duration: DUR },
+        { scale: 1.05, filter: "blur(0px)", ease: "none", duration: DUR * 0.4 },
         0,
       );
     }, sectionRef);
