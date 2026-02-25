@@ -72,7 +72,7 @@ const PublishedSection = () => {
           <Button
             variant="primary"
             size="sm"
-            className="text-lg  text-cream-light"
+            className="text-lg px-6 text-cream-light"
           >
             VIEW ALL RESEARCH
           </Button>

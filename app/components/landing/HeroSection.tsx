@@ -154,7 +154,7 @@ const HeroSection = () => {
           <img
             src="/assets/images/raja-rushabhdev.png"
             alt="Raja Rushabhdev"
-            className="object-contain object-bottom h-[40%] md:h-[92%]"
+            className="object-contain object-bottom h-[50%] md:h-[92%]"
             style={{ width: "auto", maxWidth: "none" }}
           />
         </div>

@@ -47,10 +47,10 @@ const Button: React.FC<ButtonProps> = ({
     WebkitMaskComposite: "destination-in",
     maskComposite: "intersect",
     maskImage: `
-      radial-gradient(circle 6px at 0 0, transparent 98%, black 100%),
-      radial-gradient(circle 6px at 100% 0, transparent 98%, black 100%),
-      radial-gradient(circle 6px at 0 100%, transparent 98%, black 100%),
-      radial-gradient(circle 6px at 100% 100%, transparent 98%, black 100%)
+      radial-gradient(circle 10px at 0 0, transparent 98%, black 100%),
+      radial-gradient(circle 10px at 100% 0, transparent 98%, black 100%),
+      radial-gradient(circle 10px at 0 100%, transparent 98%, black 100%),
+      radial-gradient(circle 10px at 100% 100%, transparent 98%, black 100%)
     `,
   };
 
