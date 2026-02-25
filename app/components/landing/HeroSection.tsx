@@ -13,14 +13,10 @@ const HeroSection = () => {
   const behindTextRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useLayoutEffect runs synchronously before the browser paints,
-  // so there is zero flicker – GSAP initial states are in place before
-  // the first frame is drawn.
   useLayoutEffect(() => {
     let mm = gsap.matchMedia();
 
     const createAnimation = (isMobile: boolean) => {
-      // ── STAGE 0: set initial state before any scroll ─────────────────
       gsap.set(containerRef.current, { scale: 0.55 });
       gsap.set(leftGateRef.current, { x: "0%" });
       gsap.set(rightGateRef.current, { x: "0%" });
@@ -54,12 +50,12 @@ const HeroSection = () => {
       // Gates spread
       tl.to(
         leftGateRef.current,
-        { x: isMobile ? "-155%" : "-100%", ease: "none", duration: DUR },
+        { x: isMobile ? "-100%" : "-70%", ease: "none", duration: DUR },
         0,
       );
       tl.to(
         rightGateRef.current,
-        { x: isMobile ? "155%" : "100%", ease: "none", duration: DUR },
+        { x: isMobile ? "100%" : "70%", ease: "none", duration: DUR },
         0,
       );
 
@@ -132,7 +128,7 @@ const HeroSection = () => {
               fontFamily:
                 "'Didot', 'Didot LT STD', 'GFS Didot', 'Bodoni MT', Georgia, serif",
               fontSize: "clamp(2.5rem, 6vw, 9rem)",
-              fontWeight: 700,
+              fontWeight: 500,
               letterSpacing: "0.18em",
               color: "#5E2A16",
               display: "block",

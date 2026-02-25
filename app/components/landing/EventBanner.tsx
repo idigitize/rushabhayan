@@ -55,11 +55,11 @@ const EventBanner = () => {
               PRE-REGISTER NOW
             </Button>
 
-            <button className="frame-btn min-w-[280px] h-[54px] relative flex items-center justify-center group">
+            <button className="frame-btn min-w-[280px] h-[44px] md:h-[54px]  relative flex items-center justify-center group">
               <svg
                 viewBox="0 0 500 120"
                 preserveAspectRatio="none"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full !h-[80%] md:!h-[100%] mb-2"
               >
                 <path
                   d="M 22 1 H 478 Q 478 23 501 22 V 94 Q 478 95 479 119 H 24 Q 23 97 0 98 V 24 M 0 24 Q 22 24 22 1 M 500 85"
@@ -68,10 +68,10 @@ const EventBanner = () => {
                   strokeWidth="4"
                 />
               </svg>
-              <span className="relative z-10 text-lg transition-opacity duration-300 group-hover:opacity-0">
+              <span className="relative -mt-2 md:-mt-0 z-10 text-lg transition-opacity duration-300 group-hover:opacity-0">
                 VIEW DETAILS
               </span>
-              <span className="absolute inset-0 z-10 flex items-center -mt-5 justify-center text-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap uppercase">
+              <span className="absolute inset-0 z-10 flex items-center -mt-6 justify-center text-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap uppercase">
                 Coming Soon
               </span>
             </button>

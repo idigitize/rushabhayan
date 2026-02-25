@@ -32,7 +32,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .frame-btn svg {
@@ -47,7 +47,7 @@
   top: 16px;
   left: 7px;
   color: #e6d5b8;
-  font-size: 16px;
+  font-size: 20px;
   width: 100%;
   font-weight: 500;
 }
