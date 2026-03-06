@@ -41,7 +41,7 @@ const forumItems = [
 ];
 
 export default function AboutPage() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -149,7 +149,9 @@ export default function AboutPage() {
             </p>
             <div
               className={`grid transition-all duration-500 ease-in-out ${
-                isCollapsed ? "grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"
+                isCollapsed
+                  ? "grid-rows-[0fr] opacity-0"
+                  : "grid-rows-[1fr] opacity-100"
               }`}
             >
               <div className="overflow-hidden">
