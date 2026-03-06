@@ -4,19 +4,13 @@ import Button from "../ui/Button";
 
 const MemberCTA = () => {
   return (
-    <section className="relative w-full py-20 px-4 md:px-8 ">
-      <div className="max-w-7xl mx-auto w-full bg-[#463e2d] text-[#f3e5d0] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+    <section className="relative hidden md:flex  w-full py-20  px-4 md:px-8 ">
+      <div className=" w-full bg-[#5E2A16] text-[#f3e5d0] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
         <div className="flex flex-col gap-2 z-10 text-center md:text-left">
-          <span className="text-sm md:text-base font-medium font-manrope tracking-widest uppercase text-[#c9a87c]">
-            27 – 29 November 2026 · Baroda, Gujarat
-          </span>
-          <h2 className="text-4xl font-thin md:text-5xl font-didot">
-            Register for <span className="italic">Rushabhayan 3</span>
+          <h2 className="text-[32px]  font-semibold font-manrope">
+            Join Us At Rushabhayan 3
           </h2>
-          <p className="text-sm md:text-base font-manrope opacity-80 mt-2 max-w-lg">
-            Pre-registration is strongly recommended. On-spot registration may
-            be available subject to seat capacity.
-          </p>
+          <p className="text-[56px] font-didot italic">Register Now!</p>
         </div>
 
         <div className="z-10">
@@ -24,9 +18,9 @@ const MemberCTA = () => {
             <Button
               variant="primary"
               size="md"
-              className="text-lg bg-cream-light text-brown-medium uppercase"
+              className="text-[24px] bg-cream-light text-brown-medium uppercase"
             >
-              REGISTER NOW
+              PRE-REGISTER NOW
             </Button>
           </div>
         </div>

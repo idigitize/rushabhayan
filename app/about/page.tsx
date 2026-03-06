@@ -6,6 +6,7 @@ import Image from "next/image";
 import { CaretDownIcon, CaretUpIcon } from "@phosphor-icons/react";
 import { useState, useRef, useEffect } from "react";
 import Button from "../components/ui/Button";
+import MemberCTA from "../components/landing/MemberCTA";
 
 const forumItems = [
   {
@@ -84,7 +85,6 @@ export default function AboutPage() {
         <Marquee />
         <Navbar />
       </div>
-
       {/* About Us Section */}
       <section
         className="about-us-section flex-1 z-10 bg-[#463E2D]"
@@ -196,7 +196,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Partners Section */}
       <section className="partners-section bg-[url('/assets/images/background.webp')] bg-cover bg-center bg-no-repeat">
         <h2 className="partners-title relative">
@@ -252,7 +251,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* The Forum Presents Section */}
       <section className="forum-section bg-[url('/assets/images/background.webp')] bg-cover bg-center bg-no-repeat">
         <div className="forum-container ">
@@ -292,9 +290,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+      <MemberCTA />
       <Footer />
-
       <style jsx>{`
         .about-us-section {
           width: 100%;
@@ -368,8 +365,9 @@ export default function AboutPage() {
           font-weight: 400;
           color: #5e2a16;
           position: relative;
-          z-index: 50;
+          z-index: 20;
           margin-left: 40px;
+          margin-top: 40px;
           margin-bottom: 10px;
         }
 
@@ -413,6 +411,12 @@ export default function AboutPage() {
           letter-spacing: 0.02em;
         }
 
+        @media (max-width: 1280px) {
+          .forum-left-title {
+            font-size: 40px;
+          }
+        }
+
         .forum-left-desc {
           font-family: "Manrope", sans-serif;
           font-size: 24px;
@@ -421,6 +425,11 @@ export default function AboutPage() {
           margin: 0;
         }
 
+        @media (max-width: 1280px) {
+          .forum-left-desc {
+            font-size: 20px;
+          }
+        }
         .forum-timeline {
           position: relative;
           padding-left: 36px;
@@ -477,6 +486,12 @@ export default function AboutPage() {
           letter-spacing: 0.01em;
         }
 
+        @media (max-width: 1280px) {
+          .forum-item-title {
+            font-size: 40px;
+          }
+        }
+
         .forum-item-desc {
           font-family: "Manrope", sans-serif;
           font-size: 24px;
@@ -486,11 +501,17 @@ export default function AboutPage() {
         }
 
         @media (max-width: 1280px) {
+          .forum-item-desc {
+            font-size: 20px;
+          }
+        }
+
+        @media (max-width: 1280px) {
           .about-us-container {
             padding: 80px 80px 100px;
           }
           .forum-container {
-            padding: 80px 80px;
+            padding: 80px 0px;
           }
         }
 
