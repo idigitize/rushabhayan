@@ -147,8 +147,12 @@ export default function AboutPage() {
               exhibitions, and artistic showcases that reflected the depth and
               continuity of India&apos;s knowledge traditions.
             </p>
-            {!isCollapsed && (
-              <>
+            <div
+              className={`grid transition-all duration-500 ease-in-out ${
+                isCollapsed ? "grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"
+              }`}
+            >
+              <div className="overflow-hidden">
                 <p className="about-us-body" style={{ marginTop: "1.5rem" }}>
                   A defining highlight of the second edition was the launch and
                   exhibition of over 1,100 publications, manuscripts, and rare
@@ -171,8 +175,8 @@ export default function AboutPage() {
                   ancient knowledge systems with today&apos;s world and invites
                   people to rediscover where civilization began.
                 </p>
-              </>
-            )}
+              </div>
+            </div>
             <p
               onClick={() => setIsCollapsed(!isCollapsed)}
               className="text-[#FFF2D6]  cursor-pointer text-[24px] pt-8 flex items-center gap-2"
