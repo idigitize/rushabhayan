@@ -174,7 +174,7 @@ export default function AboutPage() {
               </>
             )}
             <p
-              onClick={() => setIsCollapsed(true)}
+              onClick={() => setIsCollapsed(!isCollapsed)}
               className="text-[#FFF2D6]  cursor-pointer text-[24px] pt-8 flex items-center gap-2"
             >
               <span className="underline underline-offset-4 ">
